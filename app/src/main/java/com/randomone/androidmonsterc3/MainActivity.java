@@ -17,6 +17,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.firebase.messaging.FirebaseMessaging;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -32,6 +34,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        FirebaseMessaging.getInstance().subscribeToTopic("moduleTopic");
+
 
         mStudentEntrance = (Button) findViewById(R.id.button_entrance_student);
         mManagerEntrance = (Button) findViewById(R.id.button_entrance_manager);
