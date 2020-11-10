@@ -52,7 +52,10 @@ public class ModuleAdapter extends FirestoreRecyclerAdapter<Module, ModuleAdapte
         holder.credits.setText(model.getCredits() + " Credits");
 
         boolean isActive = model.getisActive();
+        boolean isFinished = model.getisFinished();
+        model.setisActive(holder.moduleisactive(model));
         Log.d(TAG, "isActive: " + isActive);
+        Log.d(TAG, "isFinished: " + isFinished);
         if (isActive == false) {
             holder.layouttest.setBackgroundColor(Color.parseColor("#f0f0f0")); //test colour please change
         }else {
@@ -76,7 +79,7 @@ public class ModuleAdapter extends FirestoreRecyclerAdapter<Module, ModuleAdapte
         RelativeLayout layouttest;
         public CheckBox moduleComplete;
         Boolean isActive, isFinished;
-        List<DocumentSnapshot> myListOfDocuments;
+        List<DocumentSnapshot> myListOfDocuments = new ArrayList<>();
 
         public ModuleViewholder(@NonNull View view){
             super(view);
@@ -110,10 +113,14 @@ public class ModuleAdapter extends FirestoreRecyclerAdapter<Module, ModuleAdapte
                         Module m1 = pos.toObject(Module.class);
                         m1.setisFinished(true);
                         Log.d(TAG, "" + m1.getisFinished());
-                        for (DocumentSnapshot ds : myListOfDocuments){
-                            Module m = ds.toObject(Module.class);
-                            m.setisActive(moduleisactive(m));
-                        }
+//                        m1.setisActive(moduleisactive(m1));
+
+                        Log.d(TAG, "onCheckedChanged: " + myListOfDocuments.size());
+//                        for (DocumentSnapshot ds : myListOfDocuments){
+//                            Module m = ds.toObject(Module.class);
+//                            m.setisActive(moduleisactive(m));
+//                        }
+                        Log.d(TAG, "onCheckedChanged: " + m1.getisActive());
                     }
                 }
             });
