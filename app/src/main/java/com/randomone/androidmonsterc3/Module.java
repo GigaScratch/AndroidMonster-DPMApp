@@ -135,11 +135,11 @@ public class Module implements Parcelable {
         this.Corequisite = corequisite;
     }
 
-    public boolean getFinished() {
+    public boolean getisFinished() {
         return isFinished;
     }
 
-    public void setFinished(boolean finished) {
+    public void setisFinished(boolean finished) {
         isFinished = finished;
     }
 

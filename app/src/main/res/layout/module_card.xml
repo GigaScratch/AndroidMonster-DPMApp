@@ -38,6 +38,7 @@
                 android:id="@+id/module_complete"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/wintecDarkGrey"
                 android:layout_alignParentRight="true"/>
 
         </RelativeLayout>
