@@ -35,8 +35,6 @@ import static com.randomone.androidmonsterc3.StudentProfileEdit.SHARED_PREFS;
 public class ModuleAdapter extends FirestoreRecyclerAdapter<Module, ModuleAdapter.ModuleViewholder> {
     private static final String TAG = "ModuleAdapter";
     private OnItemClickListener listener;
-
-    private static final String TAG = "ModuleAdapter";
     SharedPreferences sharedPreferences;
     Boolean unlocked = true;
 
@@ -126,16 +124,6 @@ public class ModuleAdapter extends FirestoreRecyclerAdapter<Module, ModuleAdapte
             description = view.findViewById(R.id.module_description);
             level = view.findViewById(R.id.module_level);
             credits = view.findViewById(R.id.module_credits);
-            layouttest = view.findViewById(R.id.module_background);
-
-            moduleComplete = (CheckBox) view.findViewById(R.id.module_complete);
-
-            moduleComplete.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-                @Override
-                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-
-                }
-            });
 
             moduleCheckbox = view.findViewById(R.id.module_complete);
             backgroundColour = view.findViewById(R.id.card_background);
