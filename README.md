@@ -10,5 +10,7 @@ The brief for this project was to create a streamlined and easy to learn pathway
 - Kasun Ramanayake (kasunram)
 - Mayank Sharma 
 
+### You can download the APK file here:
+***[Link To Latest Release](https://github.com/GigaScratch/AndroidMonster-DPMApp/releases/tag/v1.0)***
 ### You can view our final presentation here:
 https://youtu.be/fM72b5v39sQ
